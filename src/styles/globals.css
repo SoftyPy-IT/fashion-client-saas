@@ -1,0 +1,249 @@
+@import "styles.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1f2937 !important;
+  font-weight: 400;
+}
+
+.toggle-checkbox:checked {
+  @apply: right-0 border-gray500;
+  right: 0;
+  border-color: #282828;
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply: bg-gray500;
+  background-color: #282828;
+}
+
+.fp-watermark {
+  display: none !important;
+}
+
+/* Custom navigation buttons */
+.custom-left-nav,
+.custom-right-nav {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border: none; /* Remove default border */
+  color: #fff; /* White arrow color */
+  font-size: 18px; /* Font size for the arrow */
+  width: 30px; /* Button width */
+  height: 30px; /* Button height */
+  border-radius: 50%; /* Make buttons circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute; /* Position buttons */
+  z-index: 10; /* Ensure they are above the gallery */
+  transition: transform 0.2s ease-in-out;
+}
+
+.custom-left-nav {
+  left: 10px; /* Position to the left */
+  top: 50%; /* Center vertically */
+}
+
+.custom-right-nav {
+  right: 10px; /* Position to the right */
+  top: 50%; /* Center vertically */
+}
+
+.custom-left-nav:hover,
+.custom-right-nav:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Gallery */
+.image-gallery-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.image-gallery-main {
+  margin-bottom: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Main image zoom container */
+.zoom-image-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 133.33%; /* 3:4 aspect ratio for portrait fashion images */
+  overflow: hidden;
+  cursor: zoom-in;
+  background-color: #ffffff;
+}
+
+.zoom-disabled {
+  cursor: default;
+}
+
+.base-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.zoom-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: white;
+  z-index: 1;
+}
+
+.zoom-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Thumbnail styles */
+.thumbnail-container {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+/* Main slide styling */
+.main-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 70vh;
+  width: 100%;
+}
+
+/* Thumbnail item styling */
+.slider-item {
+  height: auto;
+  padding: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .zoom-image-container {
+    padding-bottom: 133.33%; /* Keep aspect ratio consistent */
+  }
+
+  .thumbnail-container {
+    height: auto;
+    max-height: none;
+    margin-top: 5px;
+  }
+
+  .image-gallery-main {
+    margin-bottom: 0.25rem;
+  }
+
+  .slider-item {
+    padding: 2px;
+  }
+}
+
+/* Slick slider specific overrides */
+.thumbnail-container .slick-list {
+  height: 100% !important;
+}
+
+.thumbnail-container .slick-track {
+  height: auto !important;
+}
+
+.thumbnail-container .slick-slide {
+  padding: 2px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail-container .slick-current {
+  opacity: 1;
+}
+
+.thumbnail-container .slick-slide img {
+  border: 1px solid #e2e8f0;
+  border-radius: 2px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+}
+
+.thumbnail-container .slick-current img {
+  border-color: #3182ce;
+  border-width: 1px;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d2e1e6;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d2e1e6;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #d2e1e6 #f1f1f1;
+}
+
+.custom-scrollbar:hover {
+  scrollbar-color: #55555557 #f1f1f1;
+}
+
+/* Vertical slider specific styles */
+@media (min-width: 768px) {
+  .thumbnail-container .slick-vertical .slick-slide {
+    border: none;
+    height: auto;
+    margin: 3px 0;
+  }
+
+  .thumbnail-container .slick-vertical .slick-current {
+    border: none;
+  }
+
+  .thumbnail-container .slick-vertical .slick-slide img {
+    aspect-ratio: 3/4;
+  }
+}
+.swiper-wrapper {
+  justify-content: center;
+}
