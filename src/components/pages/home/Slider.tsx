@@ -28,6 +28,7 @@ const brandColors = {
 const Slider: React.FC = () => {
   const { data: sectionsData, isLoading } = useGetAllSectionsQuery(undefined);
   const sliderData = useAppSelector(selectStorefrontData);
+  console.log(sliderData)
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const swiperRef = useRef<any>(null);

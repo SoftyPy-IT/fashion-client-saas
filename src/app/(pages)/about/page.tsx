@@ -202,7 +202,7 @@ const AboutPage = () => {
             {/* Google Maps placeholder - Replace with actual Google Maps embed */}
             <div className="bg-gray100 h-full min-h-80 flex items-center justify-center">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.407836208667!2d90.3537238!3d23.7684872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14772c59d63%3A0x9a614f4d10c58043!2sfashion-client%20hues%20of%20blues!5e0!3m2!1sen!2sbd!4v1740633790827!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.407836208667!2d90.3537238!3d23.7684872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14772c59d63%3A0x9a614f4d10c58043!2sNeelabh%20hues%20of%20blues!5e0!3m2!1sen!2sbd!4v1740633790827!5m2!1sen!2sbd"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -8,11 +7,15 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "media.fashion-client.com.bd",
+        hostname: "media.neelabh.com.bd",
       },
       {
         protocol: "https",
-        hostname: "fashion-client.com.bd",
+        hostname: "neelabh.com.bd",
+      },
+      {
+        protocol: "http",
+        hostname: "neelabh.com.bd",
       },
       {
         protocol: "https",

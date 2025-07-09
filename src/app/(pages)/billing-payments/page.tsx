@@ -11,7 +11,7 @@ const BillingPayments = () => {
       {/* Introduction */}
       <section className="mb-6">
         <p className="text-gray-600">
-          At <strong>fashion-client - Hues of Blues</strong>, we provide flexible and
+          At <strong>Neelabh - Hues of Blues</strong>, we provide flexible and
           secure payment options for our customers. Please check the details
           below for payment methods available for orders within Bangladesh.
         </p>
@@ -70,11 +70,11 @@ const BillingPayments = () => {
           <strong>registered user</strong>, you can also view your invoice
           anytime from your account on
           <a
-            href="https://fashion-client.com.bd"
+            href="https://neelabh.com.bd"
             className="text-blue-600 font-medium hover:underline"
           >
             {" "}
-            fashion-client.com.bd
+            neelabh.com.bd
           </a>
           .
         </p>

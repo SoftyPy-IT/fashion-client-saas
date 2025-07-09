@@ -40,10 +40,10 @@ const TrackOrderPage = () => {
         <p className="text-gray-600">
           📧 Email:{" "}
           <a
-            href="mailto:info@fashion-client.com.bd"
+            href="mailto:info@neelabh.com.bd"
             className="text-blue-600 font-medium hover:underline"
           >
-            info@fashion-client.com.bd
+            info@neelabh.com.bd
           </a>
         </p>
         <p className="text-gray-500 text-sm">
