@@ -16,7 +16,7 @@ const FabricCare = () => {
       {/* Introduction */}
       <section className="mb-6">
         <p className="text-gray-600">
-          At <strong>fashion-client - Hues of Blues</strong>, we use premium-quality
+          At <strong>Neelabh - Hues of Blues</strong>, we use premium-quality
           fabrics to ensure comfort, durability, and elegance in every outfit.
           Our fabrics are carefully selected to provide a luxurious feel,
           breathability, and long-lasting wear.
@@ -26,7 +26,7 @@ const FabricCare = () => {
       {/* Fabrics Used */}
       <section className="mb-6">
         <h2 className="text-xl font-semibold text-gray-700 mb-2">
-          Fabrics Used in fashion-client Products
+          Fabrics Used in Neelabh Products
         </h2>
         <div className="space-y-2">
           {[
